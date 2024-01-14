@@ -58,10 +58,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    const apiUrl = "http://localhost:3001/get";
     try {
       axios
-        .get(apiUrl)
+        .get(baseUrl + "/get")
         .then((response) => {
           setTaskdata(response?.data);
         })
